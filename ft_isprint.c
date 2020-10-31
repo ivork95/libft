@@ -1,12 +1,20 @@
-int ft_isprint(char *str)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isprint.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 17:01:41 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/29 17:01:41 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (str[i] =! '\0')
-    {
-        if(str[i] < 32 || str[i] > 126)
-            return (0);
-    }
-    return (1);
+#include "libft.h"
+
+int ft_isprint(int c)
+{
+	if (c < 32 || c > 126)
+		return (0);
+	return (1);
 }

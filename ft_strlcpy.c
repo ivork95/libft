@@ -1,15 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 15:34:10 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/29 15:34:10 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-char* ft_strlcpy(char *dst, char *src, unsigned int n)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-    unsigned int i;
+	unsigned int i;
 
-    i = 0;
-    while ((src[i] =! '\0') & (i < n - 1))
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    if (n =! 0)
-        dst[i] = '\0';
-    return (dst);
+	i = 0;
+	while ((src[i] != '\0') && (i < n - 1))
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (n != 0)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (i);
 }

@@ -1,30 +1,44 @@
-char *ft_strnstr(char *src, char *to_find, unsigned int n)
-{
-    int i;
-    int j;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strnstr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 16:29:53 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/29 16:29:53 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    if (to_find == '\0')
-        return (src);
-    while (src[i] == to_find[i])
-    {
-        i++;
-        if (to_find[i] == '\0')
-            return(src);
-    }
-    i = 0;
-    j = 0;
-    while ((src[i] != '\0') && (i < n))
-    {
-        if (src[i] == to_find[j])
-        {
-            if (to_find[j+1] == '\0')
-                return (&src[i-j]);
-            j++;
-        }
-        else
-            j = 0;
-        i++;
-    }
-    retrun (0);
+#include "libft.h"
+
+char	*ft_strnstr(const char *src, const char *to_find, size_t n)
+{
+	size_t i;
+	size_t j;
+
+	i = 0;
+	if (to_find[i] == '\0')
+		return ((char*)src);
+	while (src[i] == to_find[i])
+	{
+		i++;
+		if (to_find[i] == '\0')
+			return ((char*)src);
+	}
+	i = 0;
+	j = 0;
+	while ((src[i] != '\0') && (i < n))
+	{
+		if (src[i] == to_find[j])
+		{
+			if (to_find[j + 1] == '\0')
+				return ((char*)&src[i - j]);
+			j++;
+		}
+		else
+			j = 0;
+		i++;
+	}
+	return (0);
 }

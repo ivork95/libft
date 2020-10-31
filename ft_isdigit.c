@@ -1,13 +1,21 @@
-int ft_isdigit(char *str)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_isdigit.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 16:47:03 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/29 16:47:03 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (str[i] =! '\0')
-    {
-        if (str[i] < 48 || str[i] > 57)
-            return (0);
-        i++;
-    }
-    return (1);
+#include "libft.h"
+
+int	ft_isdigit(int c)
+{
+	if (c < 48 || c > 57)
+		return (0);
+	else
+		return (1);
 }

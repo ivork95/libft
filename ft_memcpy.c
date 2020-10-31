@@ -1,15 +1,32 @@
-void ft_memcpy(void *dest, void *src, size_t n) 
-{ 
-   // Typecast src and dest addresses to (char *) 
-   char *csrc = (char *)src;                                                        
-   char *cdest = (char *)dest;
-   int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memcpy.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 13:44:22 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/29 13:44:22 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-   // Copy contents of src[] to dest[] 
-   i = 0;
-   while (i < n)
-   {
-       cdest[i] = csrc[i];
-       i++;
-   }
-} 
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n) 
+{
+	size_t		i;
+	char		*d;
+	const char	*s;
+
+	i = 0;
+	d = (char*)dest;
+	s = (const char*)src;
+	if (!dest && ! src)
+		return (0);
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
+}
