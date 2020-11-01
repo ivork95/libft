@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   ft_memccpy.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 13:51:26 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/01 16:06:27 by ivork         ########   odam.nl         */
+/*   Created: 2020/10/29 13:45:53 by ivork         #+#    #+#                 */
+/*   Updated: 2020/10/31 16:38:14 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t		i;
 	char		*d;
-	char		*lastd;
-	const char	*lasts;
 	const char	*s;
+	int x;
 
-	d = dest;
-	s = src;
-	i = n;
-	if (!dest && !src)
-		return (0);
-	if (d < s)
+	i = 0;
+	d = (char*)dest;
+	s = (const char*)src;
+	x = 0;
+	while (s[i] != '\0')
 	{
-		while (i--)
-			*d = *s;
+		if (s[i] == c)
+			x++;
+		i++;
 	}
-	else
+	if (x == 0)
+		return (0);
+	i = 0;
+	while (i < n)
 	{
-		lasts = s + (n - 1);
-		lastd = d + (n - 1);
-		while (n--)
-			*lastd-- = *lasts--;
+		d[i] = s[i];
+		if (s[i] == c)
+			return (dest);
+		i++;
 	}
 	return (dest);
 }

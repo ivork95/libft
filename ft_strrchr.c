@@ -20,11 +20,12 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	x = 0;
 	while (s[i] != '\0')
+		i++;
+	while (i >= 0)
 	{
 		if (s[i] == c)
-			x = i;
+			return ((char*)&s[i]);
+		i--;
 	}
-	if (x == 0)
-		return (0);
-	return ((char*)&s[x]);
+	return (0);
 }

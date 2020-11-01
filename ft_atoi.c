@@ -10,26 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 int	is_white_space(char c)
 {
-	if ((c >= 9 && c <= 3) || (c == 32))
+	if ((c >= 9 && c <= 13) || (c == 32))
 		return (1);
 	return (0);
 }
 
-int	conv_num(int x, char c)
-{
-	x = x * 10 + c - '0';
-	return (x);
-}
 
 int	ft_atoi(const char *str)
 {
 	int i;
 	int count_min;
-	int x;
+	long int x;
 
 	i = 0;
 	count_min = 0;
@@ -45,9 +41,13 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		x = conv_num(x, str[i]);
+		x = x * 10 + str[i] - '0';
 		i++;
 	}
+	if ((x > 2147483647) && (count_min % 2 == 0))
+		return (-1);
+	if ((x < -2147483648) && (count_min % 2 != 0))
+		return (0);
 	if (count_min % 2 != 0)
 		return (-x);
 	return (x);

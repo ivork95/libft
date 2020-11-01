@@ -19,10 +19,10 @@ char *ft_strdup(const char *str)
 	int i;
 
 	i = 0;
-	if (str == 0)
-		return (0);
 	len = ft_strlen(str);
 	target = malloc(sizeof(*str) * len + 1);
+	if (target == 0)
+		return (NULL);
 	while (str[i] != 0)
 	{
 		target[i] = str[i];
