@@ -27,15 +27,15 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-int main () 
-{
-   char str[50];
+// int main () 
+// {
+//    char str[50];
 
-   strcpy(str,"This is string.h library function");
-   puts(str);
+//    strcpy(str,"This is string.h library function");
+//    puts(str);
 
-   memset(str,'A',50);
-   puts(str);
+//    memset(str,'A',50);
+//    puts(str);
    
-   return(0);
-}
+//    return(0);
+// }

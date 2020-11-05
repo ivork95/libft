@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -28,7 +27,7 @@ int	ft_atoi(const char *str)
 		i++;
 	if (str[i - 1] == '-')
 		count_min += 1;
-	while (str[i] >= '0' && str[i] <= '9')
+	while ((str[i] >= '0' && str[i] <= '9') && (x < 2147483647))
 	{
 		x = x * 10 + str[i] - '0';
 		i++;
@@ -42,11 +41,11 @@ int	ft_atoi(const char *str)
 	return (x);
 }
 
-int main()
-{
-	char *str1;
-	str1 = "  -234";
-	printf("atoi = %d\n",atoi(str1));
-	printf("ft_atoi = %d\n", ft_atoi(str1));
-	return (0);
-}
+// int main()
+// {
+// 	char *str1;
+// 	str1 = "99999999999999999999999999";
+// 	printf("atoi = %d\n",atoi(str1));
+// 	printf("ft_atoi = %d\n", ft_atoi(str1));
+// 	return (0);
+// }

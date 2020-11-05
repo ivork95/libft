@@ -23,14 +23,14 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int main () {
-   char str[50];
-   int len;
+// int main () {
+//    char str[50];
+//    int len;
 
-   strcpy(str, "This is tutorialspoint.com");
+//    strcpy(str, "This is tutorialspoint.com");
 
-   len = ft_strlen(str);
-   printf("Length of |%s| is |%d|\n", str, len);
+//    len = ft_strlen(str);
+//    printf("Length of |%s| is |%d|\n", str, len);
    
-   return(0);
-}
+//    return(0);
+// }

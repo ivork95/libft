@@ -1,28 +1,44 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         ::::::::             #
+#    makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: ivork <ivork@student.codam.nl>               +#+                      #
+#                                                    +#+                       #
+#    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
+#    Updated: 2020/11/05 21:03:26 by ivork         ########   odam.nl          #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	=	libft.a
-SRCS	=	ft_memset.c
-			ft_bzero.c
-			ft_memcpy.c
-			ft_memccpy.c
-			ft_memmove.c
-			ft_memchr.c
-			ft_memcmp.c
-			ft_strlen.c
-			ft_strlcpy.c
-			ft_strlcat.c
-			ft_strchr.c
-			ft_strrchr.c
-			ft_strnstr.c
-			ft_strncmp.c
-			ft_atoi.c
-			ft_isalpha.c
-			ft_isdigit.c
-			ft_isalnum.c
-			ft_isascii.c
-			ft_isprint.c
-			ft_toupper.c
-			ft_tolower.c
-			ft_calloc.c
-OBJS	=	$(srcs:.C=.O)
+SRCS	=	ft_memset.c\
+			ft_bzero.c\
+			ft_memcpy.c\
+			ft_memccpy.c\
+			ft_memmove.c\
+			ft_memchr.c\
+			ft_memcmp.c\
+			ft_strlen.c\
+			ft_strlcpy.c\
+			ft_strlcat.c\
+			ft_strchr.c\
+			ft_strrchr.c\
+			ft_strnstr.c\
+			ft_strncmp.c\
+			ft_atoi.c\
+			ft_isalpha.c\
+			ft_isdigit.c\
+			ft_isalnum.c\
+			ft_isascii.c\
+			ft_isprint.c\
+			ft_toupper.c\
+			ft_tolower.c\
+			ft_calloc.c\
+			ft_strdup.c\
+			ft_substr.c\
+			ft_strjoin.c\
+			ft_itoa.c
+OBJS	=	$(SRCS:.c=.o)
 LIBC	=	ar -rcs
 RM		=	rm -f
 CC		=	gcc
