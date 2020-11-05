@@ -13,14 +13,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	is_white_space(char c)
-{
-	if ((c >= 9 && c <= 13) || (c == 32))
-		return (1);
-	return (0);
-}
-
-
 int	ft_atoi(const char *str)
 {
 	int i;
@@ -30,15 +22,12 @@ int	ft_atoi(const char *str)
 	i = 0;
 	count_min = 0;
 	x = 0;
-	while (is_white_space(str[i]))
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			count_min++;
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-		break ;
-	}
+	if (str[i - 1] == '-')
+		count_min += 1;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		x = x * 10 + str[i] - '0';
@@ -46,9 +35,18 @@ int	ft_atoi(const char *str)
 	}
 	if ((x > 2147483647) && (count_min % 2 == 0))
 		return (-1);
-	if ((x < -2147483648) && (count_min % 2 != 0))
+	if ((x > 2147483648) && (count_min % 2 != 0))
 		return (0);
 	if (count_min % 2 != 0)
 		return (-x);
 	return (x);
+}
+
+int main()
+{
+	char *str1;
+	str1 = "  -234";
+	printf("atoi = %d\n",atoi(str1));
+	printf("ft_atoi = %d\n", ft_atoi(str1));
+	return (0);
 }

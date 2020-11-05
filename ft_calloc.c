@@ -15,8 +15,11 @@
 void *ft_calloc(size_t nitems, size_t size)
 {
 	char *mem;
-	mem = malloc(nitems * size);
-	while (mem++)
-		*mem = 0;
+	if (nitems == 0 || size == 0)
+		nitems = size = 1;
+	mem = (char*)malloc(nitems * size);
+	if (mem == NULL)
+		return (NULL);
+	ft_bzero(mem, (nitems * size));
 	return (mem);
 }

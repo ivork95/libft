@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
 #ifndef LIBFT_H_
 #define LIBFT_H_
 

@@ -15,10 +15,8 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int i;
-	int x;
 
 	i = 0;
-	x = 0;
 	while (s[i] != '\0')
 		i++;
 	while (i >= 0)
