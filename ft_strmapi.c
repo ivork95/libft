@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcmp.c                                        :+:    :+:            */
+/*   ft_strmapi.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 15:20:04 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/08 20:56:16 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 17:54:12 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:23:38 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	char	*newstr;
+	int		i;
 
 	i = 0;
-	while (i < n)
+	if (!s)
+		return (0);
+	newstr = (char*)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (newstr == NULL)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		if (((unsigned char*)str1)[i] != ((unsigned char*)str2)[i])
-			return (((unsigned char*)str1)[i] - ((unsigned char*)str2)[i]);
+		newstr[i] = f(i, s[i]);
 		i++;
 	}
-	return (0);
+	newstr[i] = '\0';
+	return (newstr);
 }

@@ -5,15 +5,15 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/01 17:35:26 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/01 17:35:26 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 21:02:07 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:19:38 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c < 65 || c > 90) && (c < 97 || c > 122))
-        return (0);
+	if ((c < 65 || c > 90) && (c < 97 || c > 122))
+		return (0);
 	else
-    	return (1);
+		return (1);
 }

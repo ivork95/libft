@@ -5,14 +5,14 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 13:44:22 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 13:44:22 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 21:04:47 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:17:44 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n) 
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t		i;
 	char		*d;
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (char*)dest;
 	s = (const char*)src;
-	if (!dest && ! src)
+	if (!dest && !src)
 		return (0);
 	while (i < n)
 	{

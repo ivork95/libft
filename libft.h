@@ -6,15 +6,22 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 12:55:29 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/05 21:04:47 by ivork         ########   odam.nl         */
+/*   Updated: 2020/11/08 20:45:37 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#ifndef LIBFT_H_
-#define LIBFT_H_
+#include <unistd.h>
+#ifndef LIBFT_H
+#define LIBFT_H
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *str, size_t n);
@@ -40,4 +47,17 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 void		*ft_calloc(size_t nitems, size_t size);
 char		*ft_strdup(const char *str);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *s, char c);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcmp.c                                        :+:    :+:            */
+/*   ft_putstr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 15:20:04 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/08 20:56:16 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 16:31:48 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:01:43 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int i;
 
 	i = 0;
-	while (i < n)
+	if (!s)
+		return ;
+	while (s[i] != 0)
 	{
-		if (((unsigned char*)str1)[i] != ((unsigned char*)str2)[i])
-			return (((unsigned char*)str1)[i] - ((unsigned char*)str2)[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	return (0);
 }

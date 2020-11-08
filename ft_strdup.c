@@ -5,18 +5,18 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 17:05:52 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 17:05:52 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 21:10:54 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:25:43 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-	char *target;
-	int len;
-	int i;
+	char	*target;
+	int		len;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(str);

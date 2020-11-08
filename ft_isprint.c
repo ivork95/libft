@@ -5,14 +5,14 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 17:01:41 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 17:01:41 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 21:03:49 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:03:52 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c < 32 || c > 126)
 		return (0);

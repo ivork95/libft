@@ -5,14 +5,14 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 16:49:34 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 16:49:34 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 21:02:45 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:19:44 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c < 0 || c > 127)
 		return (0);

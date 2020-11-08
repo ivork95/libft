@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         ::::::::             #
-#    makefile                                           :+:    :+:             #
+#    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2020/11/05 21:03:26 by ivork         ########   odam.nl          #
+#    Updated: 2020/11/08 21:46:57 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,14 @@ SRCS	=	ft_memset.c\
 			ft_strdup.c\
 			ft_substr.c\
 			ft_strjoin.c\
-			ft_itoa.c
+			ft_strtrim.c\
+			ft_split.c\
+			ft_itoa.c\
+			ft_strmapi.c\
+			ft_putchar_fd.c\
+			ft_putstr_fd.c\
+			ft_putendl_fd.c\
+			ft_putnbr_fd.c
 OBJS	=	$(SRCS:.c=.o)
 LIBC	=	ar -rcs
 RM		=	rm -f

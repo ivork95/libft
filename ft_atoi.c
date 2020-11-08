@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 16:36:13 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 16:36:13 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 20:52:30 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:18:10 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int count_min;
-	long int x;
+	int			i;
+	int			count_min;
+	long int	x;
 
 	i = 0;
 	count_min = 0;
@@ -40,12 +40,3 @@ int	ft_atoi(const char *str)
 		return (-x);
 	return (x);
 }
-
-// int main()
-// {
-// 	char *str1;
-// 	str1 = "99999999999999999999999999";
-// 	printf("atoi = %d\n",atoi(str1));
-// 	printf("ft_atoi = %d\n", ft_atoi(str1));
-// 	return (0);
-// }

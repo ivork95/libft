@@ -1,12 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_itoa.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: ivork <ivork@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/11/08 21:04:16 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:20:47 by ivork         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_convnum(char *s, int n, int x)
+char	*ft_convnum(char *s, int n, int x)
 {
 	int i;
 
 	i = 0;
 	if (n == 0)
 		s[0] = '0';
+	if (n == -2147483648)
+	{
+		s[i + 1] = '2';
+		n = -147483648;
+	}
 	if (n < 0)
 	{
 		n *= -1;
@@ -23,13 +40,13 @@ char *ft_convnum(char *s, int n, int x)
 	return (s);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int x;
-	int count;
-	char *str;
+	unsigned long	x;
+	int				count;
+	char			*str;
 
-	x = n;
+	x = (unsigned long)n;
 	count = 0;
 	if (n <= 0)
 	{
@@ -43,15 +60,6 @@ char *ft_itoa(int n)
 	}
 	str = malloc(sizeof(char) * count + 1);
 	if (str == NULL)
-		return(str);
-	return(ft_convnum(str, n, count));
-}
-
-int main()
-{
-	char *str;
-
-	str = ft_itoa(-1);
-	printf("%s\n", str);
-	return (0);
+		return (str);
+	return (ft_convnum(str, n, count));
 }

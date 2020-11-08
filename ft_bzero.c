@@ -5,14 +5,14 @@
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/29 13:44:16 by ivork         #+#    #+#                 */
-/*   Updated: 2020/10/29 13:44:16 by ivork         ########   odam.nl         */
+/*   Created: 2020/11/08 20:53:42 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/08 21:18:24 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *str, size_t n)
+void	ft_bzero(void *str, size_t n)
 {
-    ft_memset(str, 0, n);
+	ft_memset(str, 0, n);
 }
