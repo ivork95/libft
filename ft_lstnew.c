@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr_fd.c                                     :+:    :+:            */
+/*   ft_lstnew.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/08 17:02:08 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/18 13:20:16 by anonymous     ########   odam.nl         */
+/*   Created: 2020/11/10 21:11:53 by ivork         #+#    #+#                 */
+/*   Updated: 2020/11/18 13:01:35 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	if (n == -2147483648)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
-		n = 147483648;
-	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n *= -1;
-	}
-	if (n > 0)
-	{
-		if ((n / 10) != 0)
-			ft_putnbr_fd((n / 10), fd);
-		ft_putchar_fd((n % 10 + '0'), fd);
-	}
-	if (n == 0)
-		ft_putchar_fd((n + '0'), fd);
+	t_list *new_element;
+
+	new_element = (t_list *)malloc(sizeof(t_list));
+	if (new_element == NULL)
+		return (0);
+	new_element->content = content;
+	new_element->next = NULL;
+	return (new_element);
 }

@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2020/11/08 21:46:57 by ivork         ########   odam.nl          #
+#    Updated: 2020/11/18 13:05:09 by anonymous     ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,20 +45,44 @@ SRCS	=	ft_memset.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c
+
+SRCS_B	=	ft_lstnew.c\
+			ft_lstadd_front.c\
+			ft_lstsize.c\
+			ft_lstlast.c\
+			ft_lstadd_back.c
+
 OBJS	=	$(SRCS:.c=.o)
+OBJS_B	=	$(SRCS_B:.c=.o)
 LIBC	=	ar -rcs
 RM		=	rm -f
 CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra
 INCS	=	.
+
+ifdef WITH_BONUS
+RELEVANT_OBJS = $(OBJS) $(OBJS_B)
+else
+RELEVANT_OBJS = $(OBJS)
+endif
+
 all:		$(NAME)
-$(NAME):	$(OBJS)
-			${LIBC} $(NAME) $(OBJS)
+
+$(NAME):	$(RELEVANT_OBJS)
+			${LIBC} $(NAME) $(RELEVANT_OBJS)
+
 .c.o:
 			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${INCS}
+
+bonus:
+			$(MAKE) WITH_BONUS=1 all
+
 clean:
 			${RM} $(OBJS)
+
 fclean:     clean
 			${RM} $(NAME)
+
 re:			fclean all
+
 .PHONY:		all .c.o clean fclean re
