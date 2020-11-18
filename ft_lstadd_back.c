@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:11:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/18 13:16:23 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/18 15:08:02 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list *last;
+
 	if (!*lst)
 	{
-		ft_lstnew(new);
+		*lst = new;
 		return ;
 	}
-	ft_lstlast(*lst)->next = new;
-	new->next = NULL;
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
