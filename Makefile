@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2020/11/18 13:05:09 by anonymous     ########   odam.nl          #
+#    Updated: 2020/11/22 19:56:32 by anonymous     ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,10 @@ SRCS_B	=	ft_lstnew.c\
 			ft_lstadd_front.c\
 			ft_lstsize.c\
 			ft_lstlast.c\
-			ft_lstadd_back.c
+			ft_lstadd_back.c\
+			ft_lstdelone.c\
+			ft_lstclear.c\
+			ft_lstiter.c
 
 OBJS	=	$(SRCS:.c=.o)
 OBJS_B	=	$(SRCS_B:.c=.o)
@@ -78,7 +81,7 @@ bonus:
 			$(MAKE) WITH_BONUS=1 all
 
 clean:
-			${RM} $(OBJS)
+			${RM} $(OBJS) $(OBJS_B)
 
 fclean:     clean
 			${RM} $(NAME)

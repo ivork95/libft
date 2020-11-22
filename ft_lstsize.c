@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/10 21:11:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/13 14:27:26 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/22 17:09:15 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*current;
 	int		count;
 
 	if (!lst)
 		return (0);
-	current = lst;
-	count = 0;
-	while (current != NULL)
+	count = 1;
+	while (lst->next != NULL)
 	{
-		current = current->next;
+		lst = lst->next;
 		count++;
 	}
 	return (count);
