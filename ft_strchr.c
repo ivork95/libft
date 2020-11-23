@@ -6,11 +6,9 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:12:24 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/08 21:22:40 by ivork         ########   odam.nl         */
+/*   Updated: 2020/11/23 13:28:34 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

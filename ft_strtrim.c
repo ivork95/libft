@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 19:57:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/22 20:27:31 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/23 13:42:14 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	if (!s1)
-		return (0);
+		return (NULL);
 	while (s1[start] != '\0')
 	{
 		if (!(is_in_set(s1[start], set)))
