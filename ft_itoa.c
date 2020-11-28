@@ -6,13 +6,13 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:04:16 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/23 13:21:49 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/27 14:33:54 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_convnum(char *s, int n, int x)
+static char	*ft_convnum(char *s, int n, int x)
 {
 	int i;
 
@@ -40,7 +40,7 @@ char	*ft_convnum(char *s, int n, int x)
 	return (s);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	unsigned long	x;
 	int				count;

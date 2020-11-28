@@ -6,13 +6,13 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:11:29 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/25 16:21:25 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/27 20:29:27 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_array(char **array, int x)
+void			ft_free_array(char **array, int x)
 {
 	int i;
 
@@ -26,7 +26,7 @@ void	ft_free_array(char **array, int x)
 	return ;
 }
 
-size_t	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	words;
@@ -47,7 +47,7 @@ size_t	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-char	**ft_fill_in(char **array, const char *s, char c, int splits)
+static char		**ft_fill_in(char **array, const char *s, char c, int splits)
 {
 	int		i;
 	int		j;
@@ -71,7 +71,7 @@ char	**ft_fill_in(char **array, const char *s, char c, int splits)
 	return (array);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	int		words;
 	char	**arr;

@@ -6,13 +6,13 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 19:57:53 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/23 15:24:12 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/11/27 14:36:01 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_in_set(char c, const char *set)
+static int	is_in_set(char c, const char *set)
 {
 	int i;
 
@@ -26,7 +26,7 @@ int		is_in_set(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*newstr;
 	int		start;
