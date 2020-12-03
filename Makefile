@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2020/11/22 19:56:32 by anonymous     ########   odam.nl          #
+#    Updated: 2020/12/03 16:14:14 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ SRCS_B	=	ft_lstnew.c\
 			ft_lstadd_back.c\
 			ft_lstdelone.c\
 			ft_lstclear.c\
-			ft_lstiter.c
+			ft_lstiter.c\
+			ft_lstmap.c
 
 OBJS	=	$(SRCS:.c=.o)
 OBJS_B	=	$(SRCS_B:.c=.o)

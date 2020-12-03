@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_lstmap.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/08 21:08:12 by ivork         #+#    #+#                 */
-/*   Updated: 2020/12/03 13:58:29 by ivork         ########   odam.nl         */
+/*   Created: 2020/12/03 13:59:47 by ivork         #+#    #+#                 */
+/*   Updated: 2020/12/03 16:16:47 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strnstr(const char *src, const char *to_find, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t i;
-	size_t j;
+	t_list *new;
 
-	if (!*to_find)
-		return ((char*)src);
-	i = 0;
-	while (src[i] != '\0' && i < n)
+	if (!lst || !f)
+		return (NULL);
+	new = ft_lstnew(f(lst->content));
+	lst = lst->next;
+	while (lst)
 	{
-		j = 0;
-		while (to_find[j] && src[i + j] == to_find[j] && i + j < n)
-			j++;
-		if (to_find[j] == '\0')
-			return ((char*)&src[i]);
-		i++;
+		ft_lstadd_back(&new, ft_lstnew(f(lst->content)));
+		if (new->next == 0)
+		{
+			ft_lstclear(&new, del);
+			return (0);
+		}
+		lst = lst->next;
 	}
-	return (0);
+	return (new);
 }
