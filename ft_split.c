@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 21:11:29 by ivork         #+#    #+#                 */
-/*   Updated: 2020/11/27 20:29:27 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/12/04 20:58:35 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,10 @@ static char		**ft_fill_in(char **array, const char *s, char c, int splits)
 			i++;
 		array[k] = ft_substr(s, j, (i - j));
 		if (array[k] == NULL)
+		{
 			ft_free_array(array, (k + 1));
+			return (NULL);
+		}
 		k++;
 		splits--;
 	}
