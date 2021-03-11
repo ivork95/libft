@@ -11,7 +11,7 @@ First project of 42 cursus. You have to rewrite some functions from the libc. <b
 
 ## Functions
 
-*ft_atoi.c
+*''ft_atoi.c''
 *ft_bzero.c
 *ft_calloc.c
 *ft_isalnum.c
