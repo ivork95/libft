@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 12:55:29 by ivork         #+#    #+#                 */
-/*   Updated: 2020/12/03 15:11:04 by ivork         ########   odam.nl         */
+/*   Updated: 2021/04/30 17:42:56 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
 
 typedef struct		s_list
 {
@@ -79,4 +80,12 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+// get_next_line
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 42
+#endif
+int					get_next_line(int fd, char **line);
+int					ft_strichr(char *str, char c);
+char				*ft_strcjoin(char *s1, char *s2);
+char				*ft_strmove(char *dest, char *src);
 #endif

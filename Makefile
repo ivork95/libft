@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2020/12/03 16:14:14 by ivork         ########   odam.nl          #
+#    Updated: 2021/04/30 17:42:56 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,9 @@ SRCS	=	ft_memset.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c\
+			get_next_line/get_next_line.c\
+			get_next_line/get_next_line_utils.c
 
 SRCS_B	=	ft_lstnew.c\
 			ft_lstadd_front.c\
