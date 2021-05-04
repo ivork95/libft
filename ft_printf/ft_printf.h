@@ -6,7 +6,7 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 22:39:36 by ivork         #+#    #+#                 */
-/*   Updated: 2021/02/14 13:40:45 by ivork         ########   odam.nl         */
+/*   Updated: 2021/05/04 15:15:41 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <stdbool.h>
-# include "./libft/libft.h"
+# include "../libft.h"
 
 typedef struct		s_flags
 {
