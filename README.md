@@ -12,6 +12,7 @@ you’ll be allowed to use in all your other projects. <br>
 
 ## Functions
 
+* ``ft_atod``
 * ``ft_atoi``
 * ``ft_bzero``
 * ``ft_calloc``
