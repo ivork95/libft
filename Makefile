@@ -6,7 +6,7 @@
 #    By: ivork <ivork@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/05 12:53:39 by ivork         #+#    #+#                  #
-#    Updated: 2021/05/04 15:15:41 by ivork         ########   odam.nl          #
+#    Updated: 2021/05/05 14:11:02 by ivork         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS	=	ft_memset.c\
 			ft_strrchr.c\
 			ft_strnstr.c\
 			ft_strncmp.c\
+			ft_atod.c\
 			ft_atoi.c\
 			ft_isalpha.c\
 			ft_isdigit.c\
@@ -73,11 +74,7 @@ CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra
 INCS	=	.
 
-ifdef WITH_BONUS
 RELEVANT_OBJS = $(OBJS) $(OBJS_B)
-else
-RELEVANT_OBJS = $(OBJS)
-endif
 
 all:		$(NAME)
 
