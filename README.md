@@ -59,4 +59,5 @@ you’ll be allowed to use in all your other projects. <br>
 * ``ft_tolower``
 * ``ft_toupper``
 * ``get_next_line``
+* ``ft_printf``
 
