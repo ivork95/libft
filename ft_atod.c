@@ -6,15 +6,15 @@
 /*   By: ivork <ivork@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/04 17:39:30 by ivork         #+#    #+#                 */
-/*   Updated: 2021/05/04 20:29:39 by ivork         ########   odam.nl         */
+/*   Updated: 2021/10/12 17:40:15 by ivork         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 static double	get_decimal(char *str)
 {
-	int i;
-	int decimal;
-	double y;
+	int		i;
+	int		decimal;
+	double	y;
 
 	i = 1;
 	y = 0;
@@ -31,15 +31,13 @@ static double	get_decimal(char *str)
 
 double	ft_atod(const char *str)
 {
-	int			i;
-	int			count_min;
-	double		x;
-	double		y;
+	int		i;
+	int		count_min;
+	double	x;
 
 	i = 0;
 	count_min = 0;
 	x = 0;
-	y = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	if (str[i] == '-')
@@ -52,7 +50,7 @@ double	ft_atod(const char *str)
 		i++;
 	}
 	if (str[i] == '.')
-		x +=get_decimal((char*)str + i);
+		x += get_decimal((char *)str + i);
 	if (count_min % 2 != 0)
 		return (-x);
 	return (x);
